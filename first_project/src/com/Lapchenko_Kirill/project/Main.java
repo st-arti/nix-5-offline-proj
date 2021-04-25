@@ -39,12 +39,14 @@ public class Main {
     }
 
     private static void printMenu(){
-        System.out.println(
-                "Choose Action:\n" +
+        System.out.println("----------------" +
+                "\n Choose Action:\n" +
                         "1 - Print all customers\n" +
                         "2 - Add new Customer\n" +
                         "3 - Remove Customer by id\n" +
-                        "4 - To exit");
+                        "4 - To exit\n" + 
+			"----------------"
+			);
     }
 
 }
