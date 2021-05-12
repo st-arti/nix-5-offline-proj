@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class HomeWork2 {
+public class hwArrays {
     public static void main(String[] args) {
         System.out.println("Enter your size of array with  nums:");
         Scanner scanner = new Scanner(System.in);
@@ -12,16 +12,42 @@ public class HomeWork2 {
         }
 
         System.out.println("Our array: " + Arrays.toString(array));
+        String stringshow ="Enter number of operation:"
+        +System.lineSeparator()+"1) EvenNumbers"
+        +System.lineSeparator()+"2) CountPositiveNumbers"
+        +System.lineSeparator()+"3) GreaterPreviousOne"
+        +System.lineSeparator()+"4) CountElements"
+        +System.lineSeparator()+"5) ReverseOrder"
+        +System.lineSeparator()+"6) Permute Adjacent Elements";
 
+        Scanner scannerForOperation = new Scanner(System.in);
+        while (true){
+         System.out.println(stringshow);
+        int numberOfOperation = scannerForOperation.nextInt();
+        switch (numberOfOperation) {
+        case (1):
         evenNumbers(array);
+        break;
+        case (2):
         countPositiveNumbers(array);
+        break;
+        case (3):
         greaterPreviousOne(array);
+        break;
+        case (4):
         countElements(array);
+        break;
+        case (5):
         reverseOrder(array);
-        ex6(array);
-
-    }
-    //ex1
+        break;
+        case (6):
+        permuteAdjacentElements(array);
+        break;
+        default:
+        System.out.println("nevernoe chislo");
+        }
+   }
+}
     public static void evenNumbers (int [] array) {
         System.out.println("Ex.1 - Even numbers of array");
         for (int i : array){
@@ -31,7 +57,7 @@ public class HomeWork2 {
         } System.out.println();
     }
 
-    //ex2
+
     public static void countPositiveNumbers (int [] array) {
         System.out.println("Ex.2 - Count of positive numbers among the elements of the array.");
         int col = 0;
@@ -67,7 +93,7 @@ public class HomeWork2 {
         }
         System.out.println(" ");
     }
-    public static void ex6(int [] array) {
+    public static void permuteAdjacentElements(int [] array) {
         System.out.println("Ex.6 - A program that permutes adjacent elements of an array");
         int a = 0;
         for (int i = 0; i < array.length - 1; i += 2) {
