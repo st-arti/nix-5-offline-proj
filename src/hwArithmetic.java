@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class hwArrays {
+public class hwArithmetic {
     public static void main(String[] args) {
         System.out.println("Enter your size of array with  nums:");
         Scanner scanner = new Scanner(System.in);
